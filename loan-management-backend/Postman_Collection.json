@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "c62f27dd-2222-4a0b-9df0-fb1604afdd98",
+		"name": "Loan Management System REST APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Apply for Home Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"John Doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"loanAmount\": 5000000,\r\n    \"loanPurpose\": \"HOME_RENOVATION\",\r\n    \"employmentType\": \"Salaried\",\r\n    \"loanType\": \"Home Loan\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/loan/apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply for Personal Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Jane Smith\",\r\n    \"email\": \"jane@example.com\",\r\n    \"mobileNumber\": \"9988776655\",\r\n    \"salary\": 80000,\r\n    \"loanAmount\": 300000,\r\n    \"loanPurpose\": \"MARRIAGE\",\r\n    \"loanType\": \"Personal Loan\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/loan/apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Track Loan Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/loan/status/PL2026040001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan",
+						"status",
+						"PL2026040001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
