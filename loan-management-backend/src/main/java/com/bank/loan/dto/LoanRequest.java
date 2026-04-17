@@ -19,7 +19,7 @@ public class LoanRequest {
     private String email;
 
     @NotBlank(message = "Mobile number is required")
-    @Pattern(regexp = "^\\d{10}$", message = "Contact number must be exactly 10 digits")
+    @Pattern(regexp = "^(\\+\\d{1,3})?\\d{10}$", message = "Contact number must be exactly 10 digits (with optional country code)")
     private String mobileNumber;
 
     @NotBlank(message = "Date of Birth is required")
